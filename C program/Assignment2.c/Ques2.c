@@ -5,5 +5,5 @@ int main()
     printf("Enter a number");
     scanf("%d",&x);
     
-    printf("Unit digit of given number %d",x%10);
+    printf("Given number without last digit%d",x/10);
 }
