@@ -1,20 +1,22 @@
 
 #include <stdio.h>
-void printNatural(int);
+void printOdd(int);
 
 int main()
 {
     int num; 
     printf("Enter a number");
     scanf("%d",&num);
-    printNatural(num);
+    printOdd(num);
     printf("\n");
 
     return 0;
 }
-void printNatural(int n){
+void printOdd(int n){
     if(n>0){
-        printNatural(n-1);
-        printf("%d\n",n);
+        printOdd(n-1);
+         printf("%d\n",2*n-1);
+        
+       
     }
 }

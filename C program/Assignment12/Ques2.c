@@ -14,7 +14,8 @@ int main()
 }
 void printNatural(int n){
     if(n>0){
+         printf("%d\n",n);
         printNatural(n-1);
-        printf("%d\n",n);
+       
     }
 }
