@@ -11,7 +11,15 @@ int main()
         next=prev+cur;
         prev=cur;
         cur=next;
+        if(next==N){
+            printf("Number found");
+            break;
+        }
+        if(next >N){
+            printf("Number not found");
+            break;
+        }
     }
-     printf(" %d ",next);
+ 
     return 0;
 }
