@@ -5,12 +5,12 @@ int main()
     int i,j;
     for(i=1;i<=5;i++)
     {
-        for(j=1;j<=5;j++)
+        for(j=1;j<=10;j++)
         {
-            if(j<=i)
-              printf("*");
-            else
+            if(j>=7-i&&j<=i+4)
               printf(" ");
+            else
+              printf("*");
             
         }
         printf("\n");
