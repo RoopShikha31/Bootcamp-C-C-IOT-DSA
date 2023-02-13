@@ -1,10 +1,10 @@
-//Write a program to calculate the sum of two matrices each of order 3x3.
+//Write a program to calculate the product of two matrices each of order 3x3.
 
 #include <stdio.h>
 
 int main()
 {
-    int a[10][10],b[10][10],sum[10][10],r,c,i,j;
+    int a[10][10],b[10][10],mul[10][10],r,c,i,j,k,sum;
     printf("Enter number of row:");
     scanf("%d",&r);
     printf("Enter number of column:");
@@ -22,16 +22,21 @@ int main()
         }
     }
     
-    printf("sum of matrix is\n");
+    printf("mul of matrix is\n");
     for(i=0;i<r;i++){
         for(j=0;j<c;j++)
-        {
-            sum[i][j]=a[i][j]+b[i][j];
-            printf("%d ",sum[i][j]);
-        }
-        printf("\n");
+           {
+            sum=0;
+            for(k=0;k<c;k++)
+            sum=sum+a[i][k]*b[k][j];
+            mul[i][j]=sum;
+           }
+           
     }
-
-    return 0;
-    
+        for(i=0;i<r;i++){    
+           for(j=0;j<c;j++)    
+             printf("%d ",mul[i][j]); 
+              printf("\n");
+        }
+        return 0;
 }
